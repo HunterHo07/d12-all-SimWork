@@ -95,6 +95,11 @@
   </style>
   <script>
     window.onload = function() {
+      // Get the repository name from the current URL
+      var pathSegments = window.location.pathname.split('/');
+      var repoName = pathSegments[1]; // This will be 'd12-all-SimWork'
+      var redirectPath = repoName ? '/' + repoName + '/SimWork/' : '/SimWork/';
+      
       // Count down for auto-redirect
       var seconds = 5;
       var countdownElement = document.getElementById('countdown');
@@ -103,14 +108,14 @@
         countdownElement.textContent = seconds;
         if (seconds <= 0) {
           clearInterval(timer);
-          window.location.href = '/d12-all-SimWork/SimWork/';
+          window.location.href = redirectPath;
         }
       }, 1000);
       
       // Handle manual redirect to base path
       document.getElementById('home-button').addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = '/d12-all-SimWork/SimWork/';
+        window.location.href = redirectPath;
       });
       
       // Handle go back button
@@ -133,7 +138,7 @@
     </div>
     
     <div class="actions">
-      <a href="/d12-all-SimWork/SimWork/" class="button" id="home-button">Return to Main Hub</a>
+      <a href="#" class="button" id="home-button">Return to Main Hub</a>
       <button class="button secondary-button" id="back-button">Back to Previous Location</button>
     </div>
   </div>
