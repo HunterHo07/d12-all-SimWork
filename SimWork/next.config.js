@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/SimWork',
-  assetPrefix: '/SimWork/',
+  basePath: '/d12-all-SimWork/SimWork',
+  assetPrefix: '/d12-all-SimWork/SimWork/',
   trailingSlash: true,
   images: { unoptimized: true },
   webpack: (config) => {

@@ -103,14 +103,14 @@
         countdownElement.textContent = seconds;
         if (seconds <= 0) {
           clearInterval(timer);
-          window.location.href = '/SimWork/';
+          window.location.href = '/d12-all-SimWork/SimWork/';
         }
       }, 1000);
       
       // Handle manual redirect to base path
       document.getElementById('home-button').addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = '/SimWork/';
+        window.location.href = '/d12-all-SimWork/SimWork/';
       });
       
       // Handle go back button
@@ -133,7 +133,7 @@
     </div>
     
     <div class="actions">
-      <a href="/SimWork/" class="button" id="home-button">Return to Main Hub</a>
+      <a href="/d12-all-SimWork/SimWork/" class="button" id="home-button">Return to Main Hub</a>
       <button class="button secondary-button" id="back-button">Back to Previous Location</button>
     </div>
   </div>
