@@ -101,14 +101,14 @@ function MyApp({ Component, pageProps }) {
     
     // Pre-load critical images
     const criticalImages = [
-      '/d12-all-SimWork/SimWork/office-background.png',
-      '/d12-all-SimWork/SimWork/player-character.png',
-      '/d12-all-SimWork/SimWork/npc-character.png',
-      '/d12-all-SimWork/SimWork/dev-station.png',
-      '/d12-all-SimWork/SimWork/design-station.png',
-      '/d12-all-SimWork/SimWork/data-station.png',
-      '/d12-all-SimWork/SimWork/pm-station.png',
-      '/d12-all-SimWork/SimWork/ai-station.png',
+      '/d12-all-SimWork/office-background.png',
+      '/d12-all-SimWork/player-character.png',
+      '/d12-all-SimWork/npc-character.png',
+      '/d12-all-SimWork/dev-station.png',
+      '/d12-all-SimWork/design-station.png',
+      '/d12-all-SimWork/data-station.png',
+      '/d12-all-SimWork/pm-station.png',
+      '/d12-all-SimWork/ai-station.png',
     ];
     
     criticalImages.forEach(src => {
@@ -122,7 +122,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>SimWork - Future of Work Simulation</title>
         <meta name="description" content="AI-driven, immersive 'future of work' game" />
-        <link rel="icon" href="/d12-all-SimWork/SimWork/favicon.webp" />
+        <link rel="icon" href="/d12-all-SimWork/favicon.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="noise-overlay" />

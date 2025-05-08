@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "next build && touch out/.nojekyll && cp public/index.html out/index.html && cp public/404.html out/404.html",
+    "predeploy": "next build && touch out/.nojekyll && echo 'Deployment prepared with simplified path structure'",
     "deploy": "gh-pages -d out --dotfiles"
   },
   "keywords": [],
