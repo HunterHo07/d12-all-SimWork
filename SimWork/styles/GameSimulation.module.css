@@ -7,7 +7,7 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-.loadingScreen {
+.loadingOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,8 +49,121 @@
 
 @keyframes loading {
   0% { width: 0; left: 0; }
-  50% { width: 30%; }
+  50% { width: 70%; }
   100% { width: 0; left: 100%; }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(110, 31, 255, 0.3);
+  border-top: 4px solid var(--accent-primary);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.gameWorld {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholderText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.stationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 200px auto 0;
+  padding: 0 20px;
+}
+
+.station {
+  background-color: rgba(110, 31, 255, 0.1);
+  border: 2px solid var(--accent-primary);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.station:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(110, 31, 255, 0.2);
+}
+
+.stationLabel {
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.developer {
+  background: linear-gradient(135deg, rgba(110, 31, 255, 0.1), rgba(110, 31, 255, 0.2));
+}
+
+.designer {
+  background: linear-gradient(135deg, rgba(255, 61, 113, 0.1), rgba(255, 61, 113, 0.2));
+}
+
+.data {
+  background: linear-gradient(135deg, rgba(42, 183, 231, 0.1), rgba(42, 183, 231, 0.2));
+}
+
+.project-manager {
+  background: linear-gradient(135deg, rgba(244, 190, 55, 0.1), rgba(244, 190, 55, 0.2));
+}
+
+.ai-engineer {
+  background: linear-gradient(135deg, rgba(34, 211, 138, 0.1), rgba(34, 211, 138, 0.2));
+}
+
+.terminal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 20, 30, 0.9);
+  border-top: 2px solid var(--accent-primary);
+  z-index: 5;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.terminalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.terminalContent {
+  padding: 20px;
+  color: var(--text-primary);
+  font-family: monospace;
+  line-height: 1.5;
 }
 
 .gameHeader {
